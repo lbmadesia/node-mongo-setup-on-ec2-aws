@@ -1,0 +1,6 @@
+1. install certbot
+sudo apt install certbot python-certbot-nginx
+
+2. getting ssl certificate
+sudo certbot --nginx -d yourdomain.com
+

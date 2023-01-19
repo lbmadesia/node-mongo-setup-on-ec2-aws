@@ -1,0 +1,17 @@
+1. Install pm2
+sudo npm i pm2 -g
+
+2. Start a server
+pm2 start index.js
+
+3. Restart a server
+pm2 restart index.js
+
+4. stop a server
+pm2 stop index.js
+
+5. delete current server log
+pm2 delete index.js
+
+6. getting the list of server
+pm2 list

@@ -1,0 +1,37 @@
+Nodejs hosting setup
+
+1. update the package
+sudo apt update
+
+2. install nodejs and npm
+-> curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+-> sudo apt install nodejs
+
+3. install firewall
+sudo apt install ufw
+
+4. activate firewall
+sudo ufw enable
+
+5. add some usefull ports
+-> sudo ufw allow ssh
+-> sudo ufw allow http
+-> sudo ufw allow https
+
+6. install nginx
+sudo apt install nginx
+
+7. edit /etc/nginx/sites-available/default and add these configurations
+
+location / {
+	proxy_pass http://localhost:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+}
+
+8. restart server
+sudo systemctl restart nginx
+
