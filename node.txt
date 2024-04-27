@@ -4,7 +4,7 @@ Nodejs hosting setup
 sudo apt update
 
 2. install nodejs and npm
--> curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+-> curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 -> sudo apt install nodejs
 
 3. install firewall
